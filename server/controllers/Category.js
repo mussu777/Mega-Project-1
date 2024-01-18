@@ -1,5 +1,6 @@
 const { Mongoose } = require("mongoose");
 const Category = require("../models/Category");
+
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -60,7 +61,7 @@ exports.categoryPageDetails = async (req, res) => {
       })
       .exec();
 
-    //console.log("SELECTED COURSE", selectedCategory)
+    console.log("SELECTED COURSE", selectedCategory)
     // Handle the case when the category is not found
     if (!selectedCategory) {
       console.log("Category not found.");
